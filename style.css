@@ -43,6 +43,9 @@ body {
   .temp {
     font-size: 21px;
   }
+  .git-link{
+    text-decoration: none;
+  }
   #city {
     text-transform: lowercase;
   }
