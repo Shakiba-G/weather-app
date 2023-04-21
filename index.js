@@ -1,4 +1,6 @@
-let days = [
+function formatDate() {
+  let date = new Date();
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -21,11 +23,6 @@ let months = [
     "November",
     "December"
   ];
-
-function formatDate() {
-  let date = new Date();
-  let currentDay = days[date.getDay()];
-  let currentMonth = months[date.getMonth()];
   let currentHours = date.getHours();
   if (currentHours < 10) {
     currentHours = `0${currentHours}`;
@@ -34,8 +31,7 @@ function formatDate() {
   if (currentMinutes < 10) {
     currentMinutes = `0${currentMinutes}`;
   }
-  let formattedDate = `${currentDay}, ${currentMonth} ${date.getDate()} | ${currentHours}:${currentMinutes}`;
-  return formattedDate;
+  return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()} | ${currentHours}:${currentMinutes}`;
 }
 
 let timeNow = document.querySelector("#time");
