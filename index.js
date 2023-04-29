@@ -1,5 +1,5 @@
-function formatDate() {
-  let date = new Date();
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
   let days = [
     "Sunday",
     "Monday",
@@ -34,8 +34,6 @@ let months = [
   return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()} | ${currentHours}:${currentMinutes}`;
 }
 
-let timeNow = document.querySelector("#time");
-timeNow.innerHTML = formatDate();
   
 function displayCity(event) {
   event.preventDefault();
@@ -51,6 +49,7 @@ function displayWeather(response) {
   document.querySelector("#temp-today").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
@@ -59,6 +58,8 @@ function displayWeather(response) {
   );
   document.querySelector("#weather-status").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#time").innerHTML = formatDate(response.data.dt);
+  document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
   
 function findCity(city) {

@@ -14,22 +14,25 @@ body {
     top: 4px;
   }
   .card {
-    width: 700px;
+    max-width: 600px;
     padding: 30px;
   }
-  .main-emoji {
-    font-size: 100px;
+  #icon {
+    font-size: 90px;
   }
   .temp-today {
     font-size: 70px;
     position: relative;
-    top: 5px;
+    top: 10px;
   }
   .unit {
     font-size: 21px;
     position: relative;
-    top: -30px;
+    top: -40px;
     text-decoration: none;
+  }
+  #celsius-unit, #fahrenheit-unit {
+  text-decoration: none;
   }
   #weather-status {
     font-size: 25px;
