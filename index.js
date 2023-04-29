@@ -75,7 +75,9 @@ function enterCity(event) {
   let city = cityInput.toLowerCase();
   findCity(city);
 }
-  
+
+findCity("New York");
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", enterCity);
   
