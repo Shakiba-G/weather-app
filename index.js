@@ -60,6 +60,7 @@ function displayWeather(response) {
     response.data.weather[0].main;
   document.querySelector("#time").innerHTML = formatDate(response.data.dt);
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#icon").setAttribute("alt",response.data.weather[0].main);
 }
   
 function findCity(city) {
