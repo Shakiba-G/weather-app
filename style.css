@@ -22,8 +22,6 @@ body {
   }
   .temp-today {
     font-size: 70px;
-    position: relative;
-    top: 10px;
   }
   .unit {
     font-size: 21px;
@@ -50,9 +48,6 @@ body {
   .git-link{
     text-decoration: none;
   }
-  #city {
-    text-transform: lowercase;
-  }
   #city::first-letter {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
