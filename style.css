@@ -23,6 +23,13 @@ body {
   .temp-today {
     font-size: 70px;
   }
+  .temp-today .active {
+    color: black;
+    cursor: default;
+  }
+  .temp-today .active:hover {
+    text-decoration: none;
+  }
   .unit {
     font-size: 21px;
     position: relative;
