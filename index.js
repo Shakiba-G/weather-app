@@ -1,5 +1,5 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp * 1000);
+function formatDate() {
+  let date = new Date();
   let days = [
     "Sunday",
     "Monday",
