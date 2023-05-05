@@ -33,11 +33,8 @@ body {
   .unit {
     font-size: 21px;
     position: relative;
-    top: -40px;
+    top: -35px;
     text-decoration: none;
-  }
-  #celsius-unit, #fahrenheit-unit {
-  text-decoration: none;
   }
   #weather-status {
     font-size: 25px;
@@ -58,8 +55,8 @@ body {
   #city::first-letter {
     text-transform: capitalize;
   }
-  .weather-forecast {
-    margin-top: 20px;
+  .weather-forcast {
+    margin-top: 30px;
     text-align: center;
     color: black;
   }

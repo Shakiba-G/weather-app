@@ -70,7 +70,7 @@ forecast.forEach(function (forecastDay, index) {
 });
   forcastHTML = forcastHTML + `</div>`;
   forecastElement.innerHTML = forcastHTML;
-  }
+}
   
 function getForecast(coordinates) {
   let apiKey = "05ff88a47te358f7cf0o768f24abc234";
@@ -92,7 +92,6 @@ function displayWeather(response) {
   document.querySelector("#temp-today").innerHTML = Math.round(
     response.data.main.temp
   );
-  celsiusTemp = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
@@ -123,29 +122,6 @@ function enterCity(event) {
 
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", enterCity); 
-
-
-function displayCelsius(event) {
-  event.preventDefault();
-  fToC.classList.add("active");
-  cToF.classList.remove("active");
-  document.querySelector("#temp-today").innerHTML = Math.round(celsiusTemp);
-}
-  
-function displayFahrenheit(event) {
-  event.preventDefault();
-  cToF.classList.add("active");
-  fToC.classList.remove("active");
-  document.querySelector("#temp-today").innerHTML = Math.round((celsiusTemp*1.8)+32);
-}
-  
-let fToC = document.querySelector("#celsius-unit");
-fToC.addEventListener("click", displayCelsius);
-  
-let cToF = document.querySelector("#fahrenheit-unit");
-cToF.addEventListener("click", displayFahrenheit);
-
-let celsiusTemp = null;
 
 function showPosition(position) {
   let apiKey = "842b36d55cb28eba74a018029d56b04c";
